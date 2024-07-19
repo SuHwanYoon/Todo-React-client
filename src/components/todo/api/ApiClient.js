@@ -7,6 +7,7 @@ const apiURL = window.location.hostname === "localhost"
   : "https://docker-deploy-api-thrumming-sky-4166.fly.dev/";
 
 console.log('API URL:', apiURL);
+console.log('API URL확인:', apiURL);
 
 
 //Api 호출 Service component에서 import를 통해 사용될 공통 유틸리티
