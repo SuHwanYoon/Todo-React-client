@@ -4,7 +4,7 @@ import axios from "axios";
 // 클라이언트의 도메인에 따라 API URL 설정
 const apiURL = window.location.hostname === "localhost" 
   ? "http://localhost:8080" 
-  : "https://docker-deploy-api.fly.dev/";
+  : "https://cdci-deploy-api.fly.dev/";
 
 console.log('API URL:', apiURL);
 console.log('API URL확인:', apiURL);
