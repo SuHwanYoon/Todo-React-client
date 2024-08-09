@@ -53,12 +53,12 @@ function LoginComponent(){
             {/* 컴포넌트로 사용하기에는 작아서 메서드를 이용해서 메세지를 출력  */}
 
             <h6>서버의 상태의 따라 로그인 실패가 발생할수 있습니다.</h6>
-            <h6>서버(fly.io) 기간만료시 CRUD 실행 실패가 발생할수 있습니다.</h6>
-            <h6>이페이지는 서버와의 연결이 느리기 때문에 로그인 버튼 클릭후 충분히 기다려주시기 바랍니다.</h6>
-            <h6><a href="https://yoonreatclient.netlify.app/">대체 페이지(netlify)</a></h6>
+            <h6>서버(fly.io) 기간만료시 로그인 실패가 발생할수 있습니다.</h6>
+            <h6>이페이지는 서버와의 연결이 느리기 때문에 로그인 버튼 클릭후 1~2분 정도 기다려주시기 바랍니다.</h6>
+            <h6><a href="http://yoon-react-client.s3-website.ap-northeast-2.amazonaws.com/">대체 페이지1(AWS S3+EC2)</a></h6>
             <br />
             <h1>Test ID: yoon  PW: dummy</h1>
-            <h1>Login Page</h1>
+            <h1>JWT Login Page</h1>
             {/* 로그인 실패상태 변수가 true라면 로그인 실패메세지를 반환 */}
             {showErrorMessage && <div className='errorMessage'>로그인 실패 ID와PW를 확인해주세요</div>}
 

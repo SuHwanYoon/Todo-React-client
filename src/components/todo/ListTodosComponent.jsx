@@ -85,7 +85,7 @@ function ListTodosComponent() {
   return (
     // 부트스트랩 사용- container
     <div className="container">
-      <h1>Todo List</h1>
+      <h1>할일목록 페이지</h1>
       {/* 삭제시 {message}가 null이 아닐때만 화면에 표시 */}
       {message && <div className="alert alert-warning">{message}</div>}
       <div>
@@ -94,11 +94,11 @@ function ListTodosComponent() {
           <thead>
             <tr>
               {/* bold 처리를 위해 <th/> 사용 */}
-              <th>Description</th>
-              <th>Is Done?</th>
-              <th>Target Date</th>
-              <th>Delete</th>
-              <th>Update</th>
+              <th>내용</th>
+              <th>달성여부</th>
+              <th>목표날짜</th>
+              <th>삭제</th>
+              <th>수정</th>
             </tr>
           </thead>
           <tbody>
@@ -125,7 +125,7 @@ function ListTodosComponent() {
                         className="btn btn-warning"
                         onClick={() => deleteTodo(todo.id)}
                       >
-                        Delete
+                        삭제
                       </button>
                     </td>
                     {/* bootstrap 갱신버튼 추가 */}
@@ -134,7 +134,7 @@ function ListTodosComponent() {
                         className="btn btn-success"
                         onClick={() => updateTodo(todo.id)}
                       >
-                        Update
+                        수정
                       </button>
                     </td>
                   </tr>
@@ -145,7 +145,7 @@ function ListTodosComponent() {
         </table>
       </div>
       <div className="btn btn-success m-5" onClick={addNewTodo}>
-        Add New Todo
+        새로운 할일 추가
       </div>
     </div>
   );
