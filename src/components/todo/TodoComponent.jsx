@@ -95,11 +95,11 @@ export default function TodoComponent() {
     };
     // 설명 필드값이 5자 이하이면 에러메세지 출력
     if (values.description.length < 5) {
-      errors.description = "Enter at least 5 characters";
+      errors.description = "설명은 최소한 5글자 이상입력해주세요";
     }
     //날짜 필드값이 null 이거나 빈문자열이거나 유효하지않는 날짜 형식일때 에러메세지 출력
     if (values.targetDate === null || values.targetDate === "" || !moment(values.targetDate).isValid()) {
-      errors.targetDate = "Enter a targetDate";
+      errors.targetDate = "유효한 날짜를 입력해주세요";
     }
     console.log(values);
     return errors;
@@ -143,7 +143,7 @@ export default function TodoComponent() {
               />
               {/* bootstrap form-group , form-control */}
               <fieldset className="form-group">
-                <label>Description</label>
+                <label>내용</label>
                 <Field
                   type="text"
                   className="form-control"
@@ -151,12 +151,12 @@ export default function TodoComponent() {
                 />
               </fieldset>
               <fieldset className="form-group">
-                <label>Target Date</label>
+                <label>목표날짜</label>
                 <Field type="date" className="form-control" name="targetDate" />
               </fieldset>
               {/* 새로 추가된 'Is Done?' 드롭다운 필드 */}
               <fieldset className="form-group">
-                <label>Is Done?</label>
+                <label>달성여부</label>
                 {/* select,textarea 요소는 as 타입에 설정 */}
                 <Field as="select" className="form-control" name="done">
                   <option value="No">No</option>
@@ -166,7 +166,7 @@ export default function TodoComponent() {
               <div>
                 {/* formik를 사용해서 input태그에 onChange를 쓰지않아도 자동으로 변화된 입력데이터를 제출 */}
                 <button className="btn btn-success m-5" type="submit">
-                  Save
+                  저장
                 </button>
               </div>
             </Form>
