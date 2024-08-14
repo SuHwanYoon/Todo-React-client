@@ -43,6 +43,7 @@ export default function TodoApp(){
                             <Route path='/login' element={ <LoginComponent /> }/>
                             {/* github pages URL일시에 로그인페이지 라우팅 */}
                             <Route path='/flyio-client/' element={ <LoginComponent /> }/>
+                            <Route path='/Todo-React-client/' element={ <LoginComponent /> }/>
 
                             {/* welcome/ Url뒤에 입력되는 username값을 WelcomeComponent에 인자값으로 넘겨준다   */}
                             <Route path='/welcome/:username' element={
