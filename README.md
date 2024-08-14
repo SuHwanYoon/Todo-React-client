@@ -1,5 +1,5 @@
 # Github Pages 클라이언트(fly.io 배포 서버 연결)
-클라이언트 URL: https://suhwanyoon.github.io/flyio-client/
+클라이언트 URL: https://suhwanyoon.github.io/Todo-React-client/
 
 
 서버 URL: https://cdci-deploy-api.fly.dev/

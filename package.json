@@ -2,7 +2,7 @@
   "name": "todo-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://suhwanyoon.github.io/flyio-client/",
+  "homepage": "https://suhwanyoon.github.io/Todo-React-client/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
