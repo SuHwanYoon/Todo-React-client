@@ -143,7 +143,7 @@ export default function TodoComponent() {
               />
               {/* bootstrap form-group , form-control */}
               <fieldset className="form-group">
-                <label>내용</label>
+                <label>내용(필드값이 5자 이하이면 에러메세지 출력)</label>
                 <Field
                   type="text"
                   className="form-control"
@@ -151,7 +151,7 @@ export default function TodoComponent() {
                 />
               </fieldset>
               <fieldset className="form-group">
-                <label>목표날짜</label>
+                <label>목표날짜(날짜값X or 유효하지않은 날짜 ex- 00.00.00 입력시 에레메세지 출력)</label>
                 <Field type="date" className="form-control" name="targetDate" />
               </fieldset>
               {/* 새로 추가된 'Is Done?' 드롭다운 필드 */}
