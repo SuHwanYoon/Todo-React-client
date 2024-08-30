@@ -37,7 +37,7 @@ function HeaderComponent(){
                        {/* navbar-brand: 네비게이션 바에서 로고나 브랜드 이름을 나타낼 때 사용,ms-2: 요소의 시작 부분(왼쪽)에 마진으로 2단위의 여백을 추가
                         fs-2: 글자 크기를 2단위로 설정 Bootstrap에서 이 크기는 상대적으로 큰 텍스트 크기
                         fw-bold: 글자 두께를 굵게(bold) 설정,text-black: 글자 색상을 검은색으로 설정합니다. */}
-                           <a className="navbar-brand ms-2 fs-2 fw-bold text-black" href="http://13.230.93.73:8080/v1/index.html">Yoon's Library-App Link</a>
+                           <a className="navbar-brand ms-2 fs-2 fw-bold text-black" href="http://43.201.23.1:3000/">Yoon's Library-App Link</a>
                            <div className="collapse navbar-collapse">
                            {/* navbar-nav: 네비게이션 바 내부에서 네비게이션 항목들을 그룹화할 때 사용하는 클래스
                            ,nav-item: 개별 네비게이션 항목을 나타낼 때 사용하는 클래스입니다.
