@@ -1,10 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useTransition } from "react";
 import {
   deleteSpecificTodoApi,
   getTodosByUsernameApi,
 } from "./api/TodoApiService";
 import { useAuth } from "./security/AuthContext";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
+
 
 //할일 목록 컴포넌트
 function ListTodosComponent() {
@@ -16,7 +19,8 @@ function ListTodosComponent() {
   const username = authcontext.username;
   //페이지 리다렉트를 위해서 useNavicate 사용
   const navigate = useNavigate();
-
+  //번역 훅 사용
+  const {t} = useTranslation();
   // const targetDate = new Date(
   //   today.getFullYear(),
   //   today.getMonth(),
@@ -85,7 +89,7 @@ function ListTodosComponent() {
   return (
     // 부트스트랩 사용- container
     <div className="container">
-      <h1>할일목록 페이지</h1>
+      <h1>{t('todo_list')}</h1>
       {/* 삭제시 {message}가 null이 아닐때만 화면에 표시 */}
       {message && <div className="alert alert-warning">{message}</div>}
       <div>
@@ -94,11 +98,11 @@ function ListTodosComponent() {
           <thead>
             <tr>
               {/* bold 처리를 위해 <th/> 사용 */}
-              <th>내용</th>
-              <th>달성여부</th>
-              <th>목표날짜</th>
-              <th>삭제</th>
-              <th>수정</th>
+              <th>{t('content')}</th>
+              <th>{t('achievement')}</th>
+              <th>{t('targetDate')}</th>
+              <th>{t('delete')}</th>
+              <th>{t('edit')}</th>
             </tr>
           </thead>
           <tbody>
@@ -125,7 +129,7 @@ function ListTodosComponent() {
                         className="btn btn-warning"
                         onClick={() => deleteTodo(todo.id)}
                       >
-                        삭제
+                        {t('delete')}
                       </button>
                     </td>
                     {/* bootstrap 갱신버튼 추가 */}
@@ -134,7 +138,7 @@ function ListTodosComponent() {
                         className="btn btn-success"
                         onClick={() => updateTodo(todo.id)}
                       >
-                        수정
+                        {t('edit')}
                       </button>
                     </td>
                   </tr>
@@ -145,7 +149,7 @@ function ListTodosComponent() {
         </table>
       </div>
       <div className="btn btn-success m-5" onClick={addNewTodo}>
-        새로운 할일 추가
+        {t('add_new_todo')}
       </div>
     </div>
   );

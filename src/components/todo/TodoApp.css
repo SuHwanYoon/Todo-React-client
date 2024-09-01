@@ -1,11 +1,20 @@
-label,input,button{
-    margin: 10px;
-    padding: 5px;
+body{
+    /* Roboto글꼴 사용, Roboto글꼴사용이 안될시 sans-serif사용   */
+    /* 글꼴은 하위 태그(h1)에 상속된다 */
+    font-family: 'Roboto',sans-serif;
+    background-color: rgb(244, 234, 255) !important;
 }
 
-footer{
-    bottom: 0;
-    position: absolute;
-    width: 90%;
-    height: 40px;
+label,
+input,
+button {
+  margin: 10px;
+  padding: 5px;
+}
+
+footer {
+  bottom: 0;
+  position: absolute;
+  width: 90%;
+  height: 40px;
 }

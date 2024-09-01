@@ -8,6 +8,7 @@ import { useAuth } from "./security/AuthContext";
 import { useEffect, useState } from "react";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import moment from "moment";
+import { useTranslation } from "react-i18next";
 
 export default function TodoComponent() {
   // <Route path='/todo/:id' - id 를 사용하기 위해 useParams Hook사용
@@ -32,6 +33,8 @@ export default function TodoComponent() {
     // 함수호출을 하려면 ()가 필요
     getSpecificTodo();
   }, [id]);
+  // useTranslation 훅을 함수 외부에서 사용하는 번역 훅
+  const { t } = useTranslation(); 
 
   //특정 Todo 호출 api 함수 목록에서  update버튼 클릭시 (useEffect)
   function getSpecificTodo() {
@@ -95,11 +98,12 @@ export default function TodoComponent() {
     };
     // 설명 필드값이 5자 이하이면 에러메세지 출력
     if (values.description.length < 5) {
-      errors.description = "설명은 최소한 5글자 이상입력해주세요";
+      //t() 함수로 직접 번역된 문자열을 할당
+      errors.description = t('fieldLengthError');
     }
     //날짜 필드값이 null 이거나 빈문자열이거나 유효하지않는 날짜 형식일때 에러메세지 출력
     if (values.targetDate === null || values.targetDate === "" || !moment(values.targetDate).isValid()) {
-      errors.targetDate = "유효한 날짜를 입력해주세요";
+      errors.targetDate = t('invalidOrMissingDateError');
     }
     console.log(values);
     return errors;
@@ -143,8 +147,8 @@ export default function TodoComponent() {
               />
               {/* bootstrap form-group , form-control */}
               <fieldset className="form-group">
-                <label>내용</label>
-                <h6>(필드값이 5자 이하이면 에러메세지 출력)</h6>
+                <label>{t('content')}</label>
+                <h6>{t('content_field_description')}</h6>
                 <Field
                   type="text"
                   className="form-control"
@@ -152,13 +156,13 @@ export default function TodoComponent() {
                 />
               </fieldset>
               <fieldset className="form-group">
-                <label>목표날짜</label>
-                <h6>(날짜값X or 유효하지않은 날짜 ex- 00.00.00 입력시 에러메세지 출력)</h6>
+                <label>{t('targetDate')}</label>
+                <h6>{t('date_field_description')}</h6>
                 <Field type="date" className="form-control" name="targetDate" />
               </fieldset>
               {/* 새로 추가된 'Is Done?' 드롭다운 필드 */}
               <fieldset className="form-group">
-                <label>달성여부</label>
+                <label>{t('achievement')}</label>
                 {/* select,textarea 요소는 as 타입에 설정 */}
                 <Field as="select" className="form-control" name="done">
                   <option value="No">No</option>
@@ -168,7 +172,7 @@ export default function TodoComponent() {
               <div>
                 {/* formik를 사용해서 input태그에 onChange를 쓰지않아도 자동으로 변화된 입력데이터를 제출 */}
                 <button className="btn btn-success m-5" type="submit">
-                  저장
+                  {t('save')}
                 </button>
               </div>
             </Form>

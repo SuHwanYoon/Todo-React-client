@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-// 클라이언트의 도메인에 따라 API URL 설정
+// 클라이언트가 localhost->로컬 URL, 배포 클라이언트-> 배포 URL
 const apiURL = window.location.hostname === "localhost" 
   ? "http://localhost:8080" 
   : "https://cdci-deploy-api.fly.dev/";

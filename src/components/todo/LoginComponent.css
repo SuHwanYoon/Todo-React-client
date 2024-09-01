@@ -1,0 +1,46 @@
+section {
+  background-color: rgb(122, 74, 218);
+  padding: 32px;
+  width: 700px;
+  /* 상하 마진을 설정하고 좌우마진을 균등분배 함으로써 블록요소를 수평가운데 정렬 */
+  margin: 32px auto;
+  border-radius: 8px;
+  /* 텍스트 컬러 지정 */
+  /* 컬러 프로퍼티는 자식요소와 후손요소에 상속된다 */
+  color: rgb(248, 241, 255);
+  text-align: left;
+  font-size: 1rem;
+}
+
+ul {
+  /* 기본 마진 패딩값 없애기 */
+  margin: 0;
+  padding: 0;
+  /* 글머리 기호 없애기 */
+  list-style: none;
+}
+
+li {
+  /* 리스트간 간격을 주기위해 상하 마진 설정 */
+  margin: 14px 0;
+  /* 리스트 요소 들여쓰기 */
+  padding-left: 10px;
+  /* 동일한 들여쓰기를 위해 모든 li항목에 투명한 왼쪽 실선 추가 */
+  border-left: 5px solid transparent;
+}
+
+a {
+  /* 기본 링크 서식 없애기 */
+  text-decoration: none;
+  color: rgb(36, 3, 102);
+  background-color: rgb(255, 237, 177);
+  /* 수직 수평 패딩 지정 */
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+/* sudo selector : 사용 */
+/* 링크위로 마우스 올려놓았을때 클릭하였을때 스타일을 동일하게 지정 */
+a:hover,
+a:active {
+  background-color: rgb(250, 201, 39);
+}
