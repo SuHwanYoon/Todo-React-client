@@ -81,7 +81,7 @@ i18n
   .use(initReactI18next) // react-i18next 초기화
   .init({
     resources,
-    lng: "ko", // 기본 언어
+    lng: "en", // 기본 언어
     interpolation: {
       escapeValue: false, // React에서는 이미 XSS를 방지하므로 false로 설정
     },
