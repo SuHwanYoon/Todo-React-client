@@ -39,7 +39,7 @@ function HeaderComponent() {
               )}
             </Nav>
             <Nav>
-              <NavDropdown title={t('language')} id="language-nav-dropdown">
+              <NavDropdown title={t('Language')} id="language-nav-dropdown" className="bg-primary rounded fw-bold ">
                 <NavDropdown.Item onClick={() => changeLanguage("en")} active={i18n.language === 'en'}>
                   English
                 </NavDropdown.Item>
