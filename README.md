@@ -1,12 +1,12 @@
-# Github Pages 클라이언트(fly.io 배포 서버 연결)
-클라이언트 URL: https://suhwanyoon.github.io/Todo-React-client/
+# Github Pages Client(+fly.io[PaaS] Deployment )
+Client URL: https://suhwanyoon.github.io/Todo-React-client/
 
 
-서버 URL: https://cdci-deploy-api.fly.dev/
+Sever URL: https://cdci-deploy-api.fly.dev/
 
 
 이 애플리케이션은 RestAPI와 연결된 리액트로 제작된 Todo 클라이언트입니다. Create React App으로 부트스트랩되었으며, Todo 목록을 관리하기 위한 기본 기능들을 포함하고 있습니다.
-
+このアプリケーションはRestAPIとコネクトされているReactで作られたTodo-Appクライアントです。 Todoリストを管理するための基本機能が含まれています。
 ## 프로젝트 개요
 
 이 프로젝트는 사용자가 다음과 같은 작업할수있습니다.
