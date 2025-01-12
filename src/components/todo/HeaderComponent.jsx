@@ -25,8 +25,13 @@ function HeaderComponent() {
     <header className="border-bottom border-light border-5 mb-5 p-2">
       <Container>
         <Navbar expand="lg">
-          <Navbar.Brand href="http://43.201.23.1:3000/" className="ms-2 fs-6 fw-bold text-black">
-            Yoon's Library-App Link
+          <Navbar.Brand 
+            href="https://suhwanyoon.github.io/Web-Dev-Complete/" 
+            className="ms-2 fs-6 fw-bold text-black"
+            target="_blank"
+            rel="noopener noreferrer"  // 보안을 위한 필수 속성
+          >
+            Yoon's FrontEnd Page Link
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
