@@ -59,11 +59,11 @@ function LoginComponent() {
           <li>{t("login_notice_1")}</li>
           <li>{t("login_notice_2")}</li>
           <li>{t("login_notice_3")}</li>
-          <li>
+          {/* <li>
             <a href="http://yoon-react-client.s3-website.ap-northeast-2.amazonaws.com/">
               {t("login_notice_4")}
             </a>
-          </li>
+          </li> */}
         </ul>
       </section>
       {/* <h6>서버의 상태의 따라 로그인 실패가 발생할수 있습니다.</h6>
